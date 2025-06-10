@@ -49,47 +49,20 @@ flutter pub add dev:json_serializable
 
 ### 结构说明
 ```
-├── lib/
-│   ├── main.dart                  # 应用入口文件
-│   └── src/                       # 所有业务代码都放在这里
-│       ├── core/                 # 全局核心模块
-│       │   ├── constants/
-│       │   ├── error/
-│       │   ├── network/
-│       │   ├── router/
-│       │   ├── theme/
-│       │   └── utils/
-│       │
-│       ├── data/
-│       │   ├── datasources/
-│       │   │   ├── local/
-│       │   │   └── remote/
-│       │   └── models/
-│       │
-│       ├── domain/
-│       │   ├── entities/
-│       │   ├── repositories/
-│       │   └── usecases/
-│       │
-│       ├── features/
-│       │   └── auth/
-│       │       ├── data/
-│       │       │   ├── datasources/
-│       │       │   ├── models/
-│       │       │   └── repositories/
-│       │       ├── domain/
-│       │       │   ├── entities/
-│       │       │   ├── repositories/
-│       │       │   └── usecases/
-│       │       ├── presentation/
-│       │       │   ├── riverpod/ 
-│       │       │   ├── widgets/
-│       │       │   └── screens/
-│       │       └── auth_feature.dart
-│       │ 
-│       └── presentation/
-│           ├── widgets/
-│           └── pages/
+├── core             # 业务层不应包含任何 UI 
+│   ├── constants
+│   ├── error
+│   ├── ffi
+│   │   └── rust
+│   ├── network
+│   ├── router
+│   ├── theme
+│   ├── tools
+│   └── un_categorized
+├── features
+├── presentation
+│   ├── pages
+│   └── widgets
 │
-└──README.md                      # 项目说明
+└── main.dart
 ```
